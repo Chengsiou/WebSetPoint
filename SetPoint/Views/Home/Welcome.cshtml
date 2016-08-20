@@ -1,10 +1,12 @@
 ﻿@{
     ViewBag.Title = "Welcome";
 }
+<h1>目前我的點數積分</h1>
 <h2>@ViewBag.Title.</h2>
 <h3>@ViewBag.Message</h3>
+<h4>@ViewBag.shop</h4>
 
-<p>Your Welcome~master.</p>
+@*<p>Your Welcome~master, Pleaase click "home" button.</p>*@
 <!--<input type="submit" value="Home" name="Index" style="width:120px;height:40px;font-size:20px;">-->
 <!--<input type="button" value="Google"  name="Contact" style="width:120px;height:40px;font-size:20px;">-->
 
@@ -14,13 +16,14 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>index</title>
+    <title>目前點數</title>
 </head>
 <body>
+   
    @using (Html.BeginForm(FormMethod.Post))
    {
        <input type="submit" value="Home" formaction="@Url.Action("Index","Home")" style="width:120px;height:40px;font-size:20px;"/>
-       <input type="submit" value="Contact" formaction="@Url.Action("Contact","Home")" style="width:120px;height:40px;font-size:20px;" />
+       <!--<input type="submit" value="Contact" formaction="@Url.Action("Contact","Home")" style="width:120px;height:40px;font-size:20px;" />-->
    }
 
 </body>

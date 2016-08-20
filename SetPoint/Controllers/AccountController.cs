@@ -77,11 +77,13 @@ namespace SetPoint.Controllers
             // 若要啟用密碼失敗來觸發帳戶鎖定，請變更為 shouldLockout: true
             //var result = await SignInManager.PasswordSignInAsync(model.Email, model.Password, model.RememberMe, shouldLockout: false);
 
-            var result = await DAO.AccountDAO.Login(model);
-
+            //var result = await DAO.AccoxuntDAO.Login(model);
+            var result = SignInStatus.Success;
+           
             switch (result)
             {
                 case SignInStatus.Success:
+                   
                     return RedirectToLocal(returnUrl);
                 case SignInStatus.LockedOut:
                     return View("Lockout");
@@ -452,8 +454,8 @@ namespace SetPoint.Controllers
             {
                 return Redirect(returnUrl);
             }
-            //return RedirectToAction("Index", "Home");
-            return RedirectToAction("Welcome", "Home");
+            return RedirectToAction("Index", "Home");
+            //return RedirectToAction("Welcome", "Home");
         }
 
         internal class ChallengeResult : HttpUnauthorizedResult
