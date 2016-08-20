@@ -261,6 +261,7 @@
     <Content Include="Content\Image\point3.png" />
     <Content Include="Content\Image\search-icon.png" />
     <Content Include="Content\Image\search.png" />
+    <Content Include="Content\Image\setPointImage.png" />
     <Content Include="Content\Image\signin.png" />
     <Content Include="Content\Image\signup.png" />
     <Content Include="Content\Image\signup_active.png" />

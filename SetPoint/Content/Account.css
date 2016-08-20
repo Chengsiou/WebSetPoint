@@ -57,8 +57,11 @@
 }
 
 .rightImage{
-    background-color:#30739c;
-    border-radius:20px;
+    /*background-color:#30739c;*/
+    background-image:url(/Content/Image/setPointImage.png);
+    border-radius:10px;
+    background-size : 800px;
+    background-repeat:no-repeat;
     width:800px;
     height:280px;
     position:absolute;
