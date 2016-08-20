@@ -6,7 +6,7 @@ namespace SetPoint.Models
     public class ExternalLoginConfirmationViewModel
     {
         [Required]
-        [Display(Name = "電子郵件")]
+        //[Display(Name = "電子郵件")]
         public string Email { get; set; }
     }
 
@@ -42,20 +42,20 @@ namespace SetPoint.Models
     public class ForgotViewModel
     {
         [Required]
-        [Display(Name = "電子郵件")]
+        [Display(Name = "信 箱")]
         public string Email { get; set; }
     }
 
     public class LoginViewModel
     {
         [Required]
-        [Display(Name = "電子郵件")]
+        [Display(Name = "信 箱")]
         [EmailAddress]
         public string Email { get; set; }
 
         [Required]
         [DataType(DataType.Password)]
-        [Display(Name = "密碼")]
+        [Display(Name = "密 碼")]
         public string Password { get; set; }
 
         [Display(Name = "記住我?")]
@@ -66,13 +66,13 @@ namespace SetPoint.Models
     {
         [Required]
         [EmailAddress]
-        [Display(Name = "電子郵件")]
+        [Display(Name = "信 箱")]
         public string Email { get; set; }
 
         [Required]
         [StringLength(100, ErrorMessage = "{0} 的長度至少必須為 {2} 個字元。", MinimumLength = 6)]
         [DataType(DataType.Password)]
-        [Display(Name = "密碼")]
+        [Display(Name = "密 碼")]
         public string Password { get; set; }
 
         [DataType(DataType.Password)]
@@ -85,13 +85,13 @@ namespace SetPoint.Models
     {
         [Required]
         [EmailAddress]
-        [Display(Name = "電子郵件")]
+        //[Display(Name = "電子郵件")]
         public string Email { get; set; }
 
         [Required]
         [StringLength(100, ErrorMessage = "{0} 的長度至少必須為 {2} 個字元。", MinimumLength = 6)]
         [DataType(DataType.Password)]
-        [Display(Name = "密碼")]
+        [Display(Name = "密 碼")]
         public string Password { get; set; }
 
         [DataType(DataType.Password)]
@@ -106,7 +106,7 @@ namespace SetPoint.Models
     {
         [Required]
         [EmailAddress]
-        [Display(Name = "電子郵件")]
+        //[Display(Name = "電子郵件")]
         public string Email { get; set; }
     }
 }

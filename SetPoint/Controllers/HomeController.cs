@@ -4,12 +4,14 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 
+
 namespace SetPoint.Controllers
 {
     public class HomeController : Controller
     {
         public ActionResult Index()
         {
+            ViewBag.Name = "XXXX";
             return View();
         }
 
@@ -23,6 +25,13 @@ namespace SetPoint.Controllers
         public ActionResult Contact()
         {
             ViewBag.Message = "Your contact page.";
+
+            return View();
+        }
+
+        public ActionResult Welcome()
+        {
+            ViewBag.Message = "Your Login Success.~  Congratulations!!";
 
             return View();
         }

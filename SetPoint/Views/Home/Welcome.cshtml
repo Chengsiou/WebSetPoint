@@ -1,0 +1,27 @@
+﻿@{
+    ViewBag.Title = "Welcome";
+}
+<h2>@ViewBag.Title.</h2>
+<h3>@ViewBag.Message</h3>
+
+<p>Your Welcome~master.</p>
+<!--<input type="submit" value="Home" name="Index" style="width:120px;height:40px;font-size:20px;">-->
+<!--<input type="button" value="Google"  name="Contact" style="width:120px;height:40px;font-size:20px;">-->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>index</title>
+</head>
+<body>
+   @using (Html.BeginForm(FormMethod.Post))
+   {
+       <input type="submit" value="Home" formaction="@Url.Action("Index","Home")" style="width:120px;height:40px;font-size:20px;"/>
+       <input type="submit" value="Contact" formaction="@Url.Action("Contact","Home")" style="width:120px;height:40px;font-size:20px;" />
+   }
+
+</body>
+</html>

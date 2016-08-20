@@ -759,6 +759,8 @@ pre code {
 .container {
   padding-right: 15px;
   padding-left: 15px;
+  padding-top: 15px;
+  padding-bottom: 15px;
   margin-right: auto;
   margin-left: auto;
 }
@@ -4145,7 +4147,8 @@ textarea.input-group-sm > .input-group-btn > .btn {
 .container > .navbar-header,
 .container > .navbar-collapse {
   margin-right: -15px;
-  margin-left: -15px;
+  margin-top :40px;
+  /*margin-left: -15px;*/
 }
 
 @media (min-width: 768px) {
@@ -4501,8 +4504,13 @@ textarea.input-group-sm > .input-group-btn > .btn {
 }
 
 .navbar-inverse {
-  background-color: #222222;
-  border-color: #080808;
+  background-image:url("/Content/Image/title.png");
+  background-size:cover;
+  /*background-size:1260px 70px ;*/
+  background-repeat :no-repeat;
+  background-position-y:-90px;
+  /*background-color: #428bca;*/
+  /*border-color: #080808;*/
 }
 
 .navbar-inverse .navbar-brand {
@@ -4520,7 +4528,7 @@ textarea.input-group-sm > .input-group-btn > .btn {
 }
 
 .navbar-inverse .navbar-nav > li > a {
-  color: #999999;
+  color: #30739c;
 }
 
 .navbar-inverse .navbar-nav > li > a:hover,
@@ -6783,6 +6791,7 @@ td.hidden-lg {
   display: none !important;
 }
 
+
 tr.visible-print {
   display: none !important;
 }
@@ -6814,3 +6823,18 @@ td.visible-print {
     display: none !important;
   }
 }
+
+/*.Logo{
+    width:auto;
+    width :148px;
+}
+
+.TopBg{
+    height:150px;
+}
+
+.ButtomBg{
+  
+    padding-bottom:30px;
+    background-color: #CCDDFF;
+}*/

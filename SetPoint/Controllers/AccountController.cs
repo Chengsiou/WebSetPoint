@@ -75,7 +75,8 @@ namespace SetPoint.Controllers
 
             // 這不會計算為帳戶鎖定的登入失敗
             // 若要啟用密碼失敗來觸發帳戶鎖定，請變更為 shouldLockout: true
-            var result = await SignInManager.PasswordSignInAsync(model.Email, model.Password, model.RememberMe, shouldLockout: false);
+            //var result = await SignInManager.PasswordSignInAsync(model.Email, model.Password, model.RememberMe, shouldLockout: false);
+            var result = SignInStatus.Success;
             switch (result)
             {
                 case SignInStatus.Success:
@@ -449,7 +450,8 @@ namespace SetPoint.Controllers
             {
                 return Redirect(returnUrl);
             }
-            return RedirectToAction("Index", "Home");
+            //return RedirectToAction("Index", "Home");
+            return RedirectToAction("Welcome", "Home");
         }
 
         internal class ChallengeResult : HttpUnauthorizedResult
