@@ -12,7 +12,7 @@ obj/
 [Rr]elease*/
 packages/
 .vs/
-.vs/config/applicationhost
+.vs/config/applicationhost.config
 # Packages #
 ############
 # it's better to unpack these files and commit the raw source

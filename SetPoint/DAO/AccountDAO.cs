@@ -36,5 +36,26 @@ namespace SetPoint.DAO
             }
             return result;
         }
+        public static async Task<Dictionary<string, string>> GetAccountPoint(string uid)
+        {
+            string[] shops = { "SE", "FM", "OK", "WS", "CM" };
+            var builder = Builders<BsonDocument>.Filter;
+            var filter = builder.Eq("uid", uid);
+            var resultList = await MongoDb.QueryDB(filter, "AccountPoint");
+            var pointDictionary = new Dictionary<string, string>();
+            for (int i = 0; i < resultList.Count; i++)
+            {
+                for (int j = 0; j < shops.Length; j++)
+                {
+                    string shopContent = "";
+                    if (resultList[i].Contains(shops[j]))
+                    {
+                        shopContent = resultList[i].GetElement(shops[j]).Value.ToJson();
+                    }
+                    pointDictionary.Add(shops[j], shopContent);
+                }
+            }
+            return pointDictionary;
+        }
     }
 }
