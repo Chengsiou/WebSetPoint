@@ -13,21 +13,19 @@
     <link href="~/Content/Account.css" rel="stylesheet"/>
 </head>
 <body>
-    <div class="ButtomBg">
-        <div class="navbar navbar-inverse ">
-            <div class="container TopBg">
-                <a href="Home/Index"><img src="~/Content/Image/LOGO.png" class="Logo" /></a>
-            </div>
-            <div class="navbar-collapse collapse">
-                <ul id="navbar" class="nav navbar-nav Setfont">
-                    <li>@Html.ActionLink("首頁", "Index", "Home")</li>
-                    @*<li>@Html.ActionLink("觀看點數", "Welcome", "Home")</li>*@
-                    @*<li><a href="Home/Welcome">觀看點數</a></li>*@
-                    @*<li>@Html.ActionLink("連絡方式", "Contact", "Home")</li>*@
-                </ul>
-                @Html.Partial("_LoginPartial")
-            </div>
-        </div>
+    <div class="LayoutTitle">
+        <div class="TopBg">
+            <a href="/Home/Index"><img src="~/Content/Image/LOGO.png" class="Logo" /></a>
+        </div>  
+    </div>
+    <div class="navbar-collapse collapse ButtomBg">
+        <ul id="navbar" class="nav navbar-nav Setfont">
+            <li>@Html.ActionLink("首頁", "Index", "Home")</li>
+            @*<li>@Html.ActionLink("觀看點數", "Welcome", "Home")</li>*@
+            @*<li><a href="Home/Welcome">觀看點數</a></li>*@
+            @*<li>@Html.ActionLink("連絡方式", "Contact", "Home")</li>*@
+        </ul>
+        @Html.Partial("_LoginPartial")
     </div>
     <div class="container body-content">
         @RenderBody()

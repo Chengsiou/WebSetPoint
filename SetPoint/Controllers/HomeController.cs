@@ -3,14 +3,16 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
-
+using System.Threading.Tasks;
 
 namespace SetPoint.Controllers
 {
     public class HomeController : Controller
     {
-        public ActionResult Index()
+        public async Task<ActionResult> Index()
         {
+            var uid = "hh4854@gmail.com";
+            var pointDic = await DAO.AccountDAO.GetAccountPoint(uid);
             //ViewBag.Name = "XXXX";
             var query = Request.Url.Query;
             var shop = Request.QueryString["shop"];
@@ -19,9 +21,9 @@ namespace SetPoint.Controllers
             if (shop != null)
             {
                 ViewBag.shop = shopname[shop];
-                ViewBag.point = pointname[shop];
+                ViewBag.point = pointDic[shop];
             }
-                return View();
+            return View();
         }
 
         public ActionResult About()
@@ -38,13 +40,15 @@ namespace SetPoint.Controllers
             return View();
         }
 
-        public ActionResult Welcome()
+        public async Task<ActionResult> Welcome()
         {
-            ViewBag.Message = "Your point score.~!!" + "<br/>";
-            foreach (KeyValuePair<string,string> kvp in shopname)
+            var uid = "hh4854@gmail.com";
+            var result = await DAO.AccountDAO.GetAccountPoint(uid);
+            //ViewBag.Message = "Your point score.~!!";
+            foreach (KeyValuePair<string,string> kvp in result)
             {
-                ViewBag.Message += "<pre>" + kvp.Value + "<pre/>";
-                ViewBag.Message += "<pre>" + pointname[kvp.Key] + "<pre/>";
+                ViewBag.Message += shopname[kvp.Key] + " 點數:";
+                ViewBag.Message += result[kvp.Key] + "newline newline";
             }
             //Response.Write(ViewBag.Message);
             return View();

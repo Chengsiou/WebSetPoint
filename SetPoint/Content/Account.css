@@ -16,9 +16,10 @@
 
 
 .Logo{
-    padding-top : 25px;
+    margin-top : 45px;
     width:auto;
     width :148px;
+    margin-left:50px;
 }
 
 .TopBg{
@@ -59,6 +60,7 @@
     border-radius:20px;
     width:280px;
     height:500px;
+    float:left;
 }
 
 .rightImage{
@@ -69,13 +71,18 @@
     background-repeat:no-repeat;
     width:800px;
     height:280px;
-    position:absolute;
-    left:50%;
+    margin-bottom:250px;
+    margin-left:320px;
     top:50%;
-    margin-left:-250px;
-    margin-top:-70px;
-}
 
+}
+.pointContent {
+    width:800px;
+    height:280px;
+    margin-bottom:250px;
+    margin-left:320px;
+    top:50%;
+}
 .Shop1{
     margin-bottom:20px;
     background-color:#fff;
@@ -152,4 +159,12 @@
 
 .SetMarketTitle{
     font-size:30px;
+}
+
+.LayoutTitle {
+  background-image:url(/Content/Image/title.png);
+
+  background-size:cover;
+  background-repeat :no-repeat;
+  /*background-position-y:-90px;*/
 }
