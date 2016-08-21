@@ -2,9 +2,9 @@
     ViewBag.Title = "Welcome";
 }
 <h1>目前我的點數積分</h1>
-<h2>@ViewBag.Title.</h2>
-<h3>@ViewBag.Message</h3>
-<h4>@ViewBag.shop</h4>
+
+
+
 
 @*<p>Your Welcome~master, Pleaase click "home" button.</p>*@
 <!--<input type="submit" value="Home" name="Index" style="width:120px;height:40px;font-size:20px;">-->
@@ -13,13 +13,19 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            var innerHtml = $("#pointContent").html().replace(/newline/g, "<br/>");
+            $("#pointContent").html(innerHtml);
+        });
+    </script>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>目前點數</title>
 </head>
 <body>
-   
+    <h3 id="pointContent">@ViewBag.Message</h3>
    @using (Html.BeginForm(FormMethod.Post))
    {
        <input type="submit" value="Home" formaction="@Url.Action("Index","Home")" style="width:120px;height:40px;font-size:20px;"/>

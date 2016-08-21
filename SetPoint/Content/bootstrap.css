@@ -4504,14 +4504,8 @@ textarea.input-group-sm > .input-group-btn > .btn {
 }
 
 .navbar-inverse {
-  background-image:url("/Content/Image/title.png");
-  background-size:cover;
-  min-height:150px;
-  /*background-size:1260px 70px ;*/
-  background-repeat :no-repeat;
-  background-position-y:-90px;
-  /*background-color: #428bca;*/
-  /*border-color: #080808;*/
+  background-color: #428bca;
+  border-color: #080808;
 }
 
 .navbar-inverse .navbar-brand {
